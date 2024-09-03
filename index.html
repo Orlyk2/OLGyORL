@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para [Nombre de tu Novia]</title>
+    <link rel="icon" href="https://example.com/path/to/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="https://example.com/path/to/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://example.com/path/to/favicon-64x64.png" sizes="64x64" type="image/png">
+    <link rel="icon" href="https://example.com/path/to/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden; /* Evitar el scroll horizontal */
+        }
+        header {
+            background-color: #ff8c94;
+            padding: 20px;
+            font-size: 1.5em; /* Tamaño ajustado para pantallas pequeñas */
+            color: white;
+            animation: colorChange 5s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% { background-color: #ff8c94; }
+            50% { background-color: #ff5e6c; }
+            100% { background-color: #ff003b; }
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px; /* Ajustado para pantallas pequeñas */
+            font-size: 1em; /* Tamaño ajustado para pantallas pequeñas */
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #ff5e6c;
+            transform: scale(1.1);
+        }
+        .section {
+            padding: 30px 10px; /* Ajustado para pantallas pequeñas */
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+        .floating-image {
+            position: absolute;
+            width: 150px; /* Tamaño mediano de las imágenes */
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.5s, width 0.5s;
+        }
+        .floating-image:hover {
+            width: 300px; /* Tamaño del zoom */
+            transform: scale(2); /* Aumentar el tamaño de la imagen al pasar el cursor */
+            z-index: 2;
+        }
+        .image-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+        }
+        .image-container img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px; /* Ajustado para pantallas pequeñas */
+            background-color: #ff5e6c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1em; /* Tamaño ajustado para pantallas pequeñas */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 10; /* Asegura que esté por encima de otros elementos */
+        }
+        #back-to-top:hover {
+            background-color: #ff003b;
+            transform: scale(1.1);
+        }
+        #music-control {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 10;
+        }
+        #music-control:hover {
+            background-color: #ff5e6c;
+            transform: scale(1.1);
+        }
+
+        /* Media Queries para adaptarse a pantallas más pequeñas */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2em;
+            }
+            .button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            .section {
+                padding: 20px 5px;
+            }
+            .floating-image {
+                width: 100px;
+            }
+            #back-to-top {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            #music-control {
+                bottom: 60px;
+                right: 15px;
+                padding: 8px 12px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header"> OLGA LUCIA</header>
+
+  
+
+    <div id="section1" class="section">
+        <h2>AMOR</h2>
+        <p></p>
+        <p>En cada rincón de mi vida, en cada latido de mi corazón, tú estás presente. Eres la luz que ilumina mis días y la calma que acompaña mis noches. La forma en que haces que cada momento sea especial es algo que valoro inmensamente. Tu amor, tu ternura y tu risa llenan mi vida de una felicidad indescriptible. Me duele profundamente tener que alejarme por un tiempo, pero quiero que sepas que cada pensamiento, cada segundo lejos de ti es un recordatorio de lo increíblemente afortunado que soy por tenerte en mi vida. Por favor, perdóname por este tiempo que estaremos separados y recuerda que, aunque esté lejos, siempre estás en mi mente y en mi corazón. Te extraño más de lo que las palabras pueden expresar, y espero con ansias el momento en que podamos estar juntos nuevamente. Con todo mi amor, [Tu Nombre].</p>
+    </div>
+
+ 
+
+    <div id="section3" class="section">
+        <h2>Juego Sorpresa</h2>
+        <p>Haz clic en el botón para descubrir una sorpresa...</p>
+        <button class="button" onclick="showSurprise()">¡Clic aquí!</button>
+        <p id="surprise" style="display: none; font-size: 1.5em; margin-top: 20px;">🎉 ¡Sorpresa! ¡Eres lo mejor que me ha pasado! 🎉</p>
+    </div>
+
+    <footer>Nos vemos pronto. Con amor, [Tu negro ].</footer>
+
+    
+
+    <!-- Contenedor de la imagen en pantalla completa -->
+    <div id="image-container" class="image-container">
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+
+    <!-- Imágenes flotantes que se mueven por la pantalla -->
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0055.jpg?raw=true" alt="Foto 1" class="floating-image" id="image1" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0063.jpg?raw=true" alt="Foto 2" class="floating-image" id="image2" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20220403-WA0151.jpg?raw=true" alt="Foto 3" class="floating-image" id="image3" onclick="show
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20220403-WA0151.jpg?raw=true" alt="Foto 3" class="floating-image" id="image3" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20221202-WA0092.jpg?raw=true" alt="Foto 4" class="floating-image" id="image4" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20220403-WA0089.jpg?raw=true" alt="Foto 5" class="floating-image" id="image5" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0058.jpg?raw=true" alt="Foto 6" class="floating-image" id="image6" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0062.jpg?raw=true" alt="Foto 7" class="floating-image" id="image7" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0036.jpg?raw=true" alt="Foto 8" class="floating-image" id="image8" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/IMG-20210614-WA0030.jpg?raw=true" alt="Foto 9" class="floating-image" id="image9" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/Screenshot_20220331-095212_Video%20Player.jpg?raw=true" alt="Foto 10" class="floating-image" id="image10" onclick="showImage(this.src)">
+    <img src="https://github.com/Orlyk2/OLGyORL/blob/a5767f2f5e8434890b4f87ed8bd3997bb40d93ab/Screenshot_20220331-095203_Video%20Player.jpg?raw=true" alt="Foto 11" class="floating-image" id="image11" onclick="showImage(this.src)">
+
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Botón de control de música -->
+    <button id="music-control" onclick="toggleMusic()">🔊</button>
+
+    <!-- Elemento de audio -->
+    <audio id="background-music" src="https://github.com/Orlyk2/OLGyORL/blob/b7ec953e4cf6f7faf47a3b1742a9d14128f0ce79/Dime%20C%C3%B3mo%20Te%20Olvido%2C%20Binomio%20De%20Oro%20De%20Am%C3%A9rica%20-%20Audio.mp3" preload="auto"></audio>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showSurprise() {
+            document.getElementById('surprise').style.display = 'block';
+        }
+
+        function showImage(src) {
+            const imageContainer = document.getElementById('image-container');
+            const fullscreenImage = document.getElementById('fullscreen-image');
+            fullscreenImage.src = src;
+            imageContainer.style.display = 'flex';
+        }
+
+        // Cerrar la imagen de pantalla completa al hacer clic fuera de ella
+        document.getElementById('image-container').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+
+        // Movimiento de las imágenes flotantes
+        document.querySelectorAll('.floating-image').forEach(image => {
+            let x = Math.random() * (window.innerWidth - 150);
+            let y = Math.random() * (window.innerHeight - 150);
+            let directionX = (Math.random() - 0.5) * 2;
+            let directionY = (Math.random() - 0.5) * 2;
+            const speed = 1; // Ajusta la velocidad aquí
+
+            function moveImage() {
+                x += directionX * speed;
+                y += directionY * speed;
+
+                // Rebotar al chocar con los límites de la ventana
+                if (x <= 0 || x + image.width >= window.innerWidth) directionX *= -1;
+                if (y <= 0 || y + image.height >= window.innerHeight) directionY *= -1;
+
+                image.style.left = `${x}px`;
+                image.style.top = `${y}px`;
+
+                requestAnimationFrame(moveImage); // Continuar el movimiento
+            }
+
+            moveImage(); // Iniciar el movimiento de la imagen
+        });
+
+        // Función para volver al encabezado
+        function scrollToTop() {
+            document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Función para controlar la música
+        function toggleMusic() {
+            const audio = document.getElementById('background-music');
+            const button = document.getElementById('music-control');
+            if (audio.paused) {
+                audio.play();
+                button.textContent = '🔈'; // Cambia el ícono cuando la música está activa
+            } else {
+                audio.pause();
+                button.textContent = '🔊'; // Cambia el ícono cuando la música está pausada
+            }
+        }
+    </script>
+</body>
+</html>
